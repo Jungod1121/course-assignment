@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><!-- REPORT_TITLE --></title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --text-dim: #555;
+    --border: #d0d0d0;
+    --accent: #1a5276;
+    --code-bg: #f5f5f8;
+    --note-bg: #fef9e7;
+    --note-border: #f0c060;
+    --info-bg: #eaf2f8;
+    --info-border: #4da6ff;
+    --table-head-bg: #1a3a5c;
+    --table-head-text: #ffffff;
+    --table-stripe: #f8f9fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+    font-size: 12pt; line-height: 1.8;
+    max-width: 800px; margin: 0 auto; padding: 40px 32px;
+  }
+  .cover {
+    text-align: center; padding: 80px 0 60px;
+    page-break-after: always;
+    border-bottom: 2px solid var(--border); margin-bottom: 40px;
+  }
+  .cover h1 {
+    font-family: "Heiti SC", "SimHei", "Noto Sans CJK SC", sans-serif;
+    font-size: 22pt; font-weight: 700; margin-bottom: 12px;
+  }
+  .cover .subtitle { font-size: 14pt; color: var(--text-dim); margin-bottom: 40px; }
+  .cover table { margin: 0 auto; border-collapse: collapse; }
+  .cover table td { padding: 6px 16px; font-size: 12pt; }
+  .cover table td:first-child { text-align: right; font-weight: 600; white-space: nowrap; }
+  .cover table td:last-child { text-align: center; min-width: 140px; border-bottom: 1px solid var(--text); }
+  .toc {
+    page-break-after: always; margin-bottom: 40px;
+    padding-bottom: 20px; border-bottom: 1px solid var(--border);
+  }
+  .toc h2 {
+    font-family: "Heiti SC", "SimHei", sans-serif;
+    font-size: 16pt; text-align: center; margin-bottom: 20px;
+  }
+  .toc ol { list-style: none; padding-left: 0; }
+  .toc li { padding: 4px 0; border-bottom: 1px dotted var(--border); }
+  .toc a { color: var(--text); text-decoration: none; }
+  .toc .toc-h2 { font-weight: 600; }
+  .toc .toc-h3 { padding-left: 24px; font-size: 11pt; }
+  h2 {
+    font-family: "Heiti SC", "SimHei", sans-serif;
+    font-size: 16pt; font-weight: 700; margin: 32px 0 14px;
+    padding-bottom: 6px; border-bottom: 1.5px solid var(--accent);
+  }
+  h3 {
+    font-family: "Heiti SC", "SimHei", sans-serif;
+    font-size: 14pt; font-weight: 700; margin: 24px 0 10px;
+  }
+  h4 {
+    font-family: "Heiti SC", "SimHei", sans-serif;
+    font-size: 12pt; font-weight: 700; margin: 18px 0 8px;
+  }
+  p { text-indent: 2em; margin: 6px 0; }
+  p.no-indent { text-indent: 0; }
+  .math-block { text-align: center; margin: 14px 0; font-size: 11pt; }
+  .figure { text-align: center; margin: 20px 0; }
+  .figure img { max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 4px; }
+  .caption { font-size: 9pt; color: var(--text-dim); margin-top: 6px; text-indent: 0; }
+  .two-col { display: flex; gap: 16px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
+  .two-col .figure { flex: 1; min-width: 260px; margin: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 10pt; }
+  th {
+    background: var(--table-head-bg); color: var(--table-head-text);
+    font-family: "Heiti SC", "SimHei", sans-serif;
+    font-weight: 700; padding: 8px 10px; text-align: center;
+  }
+  td { padding: 6px 10px; border: 1px solid var(--border); text-align: center; }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .note, .info { margin: 14px 0; padding: 10px 14px; border-left: 4px solid; font-size: 11pt; text-indent: 0; }
+  .note { background: var(--note-bg); border-color: var(--note-border); }
+  .info { background: var(--info-bg); border-color: var(--info-border); }
+  pre {
+    background: var(--code-bg); border: 1px solid var(--border);
+    border-radius: 4px; padding: 12px 16px; overflow-x: auto;
+    margin: 10px 0; font-size: 9pt; line-height: 1.5;
+  }
+  code { font-family: "JetBrains Mono", "Courier New", monospace; }
+  p code, li code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; font-size: 10pt; }
+  ul, ol { margin: 8px 0 8px 2em; }
+  li { margin: 3px 0; }
+  .meta-line { text-align: right; font-size: 9pt; color: var(--text-dim); margin-bottom: 4px; text-indent: 0; }
+  @media print {
+    body { padding: 0; }
+    .cover { page-break-after: always; }
+    .toc { page-break-after: always; }
+    h2 { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== 封面 ====== -->
+<div class="cover">
+  <h1><!-- REPORT_TITLE --></h1>
+  <div class="subtitle">课程作业报告</div>
+  <table>
+    <tr><td>课　　程</td><td><!-- COURSE_NAME --></td></tr>
+    <tr><td>姓　　名</td><td><!-- NAME --></td></tr>
+    <tr><td>学　　号</td><td><!-- STUDENT_ID --></td></tr>
+    <tr><td>班　　级</td><td><!-- CLASS --></td></tr>
+    <tr><td>专　　业</td><td><!-- MAJOR --></td></tr>
+    <tr><td>日　　期</td><td><!-- DATE --></td></tr>
+  </table>
+</div>
+
+<!-- ====== 目录 ====== -->
+<div class="toc">
+  <h2>目　录</h2>
+  <ol>
+    <li class="toc-h2"><a href="#sec1">一、问题描述</a></li>
+    <li class="toc-h2"><a href="#sec2">二、理论基础</a></li>
+    <li class="toc-h2"><a href="#sec3">三、计算方法</a></li>
+    <li class="toc-h2"><a href="#sec4">四、结果与分析</a></li>
+    <li class="toc-h2"><a href="#sec5">五、代码附录</a></li>
+    <li class="toc-h2"><a href="#sec6">参考文献</a></li>
+  </ol>
+</div>
+
+<!-- ====== 正文（LLM 填写内容） ====== -->
+
+<h2 id="sec1">一、问题描述</h2>
+
+<h2 id="sec2">二、理论基础</h2>
+
+<h2 id="sec3">三、计算方法</h2>
+
+<h2 id="sec4">四、结果与分析</h2>
+
+<h2 id="sec5">五、代码附录</h2>
+
+<h2 id="sec6">参考文献</h2>
+
+</body>
+</html>
