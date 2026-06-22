@@ -315,8 +315,8 @@ Humanizer-zh 处理完后（或 fallback 直接用此规则），再针对课程
 
 ### 7.1 复制脚本
 ```bash
-cp <skill_dir>/html2docx/generate_docx.py <output_dir>/
-cp <skill_dir>/html2docx/mml2omml.py <output_dir>/
+cp lib/html2docx/generate_docx.py <output_dir>/
+cp lib/html2docx/mml2omml.py <output_dir>/
 ```
 
 ### 7.2 编写转换脚本

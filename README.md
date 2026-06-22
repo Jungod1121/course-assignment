@@ -16,16 +16,20 @@
 ## 安装
 
 ```bash
-# 克隆到 Claude Code 技能目录
-git clone https://github.com/Jungod1121/course-assignment.git ~/.claude/skills/course-assignment
+# 一键克隆（含全部依赖）
+git clone --recursive https://github.com/Jungod1121/course-assignment.git ~/.claude/skills/course-assignment
+```
+
+如果已经克隆忘了加 `--recursive`：
+```bash
+cd ~/.claude/skills/course-assignment
+git submodule update --init --recursive
 ```
 
 **前置依赖**：
 
 | 依赖 | 说明 |
 |------|------|
-| [html2docx](https://github.com/Jungod1121/html2docx) | HTML→DOCX 转换器，必须安装到 `~/.claude/skills/html2docx/` |
-| [Humanizer-zh](https://github.com/op7418/Humanizer-zh) | 中文 AI 味检测与去味（推荐），未安装时自动降级为纯规则检查 |
 | Python 3 | numpy, scipy, matplotlib, python-docx, beautifulsoup4, lxml, latex2mathml, pillow |
 | MATLAB (可选) | 用于控制系统/信号处理类作业，需配置 MCP |
 
@@ -55,9 +59,12 @@ pip3 install numpy scipy matplotlib python-docx beautifulsoup4 lxml latex2mathml
 
 ```
 ~/.claude/skills/course-assignment/
-├── SKILL.md                  # 主技能文件
+├── SKILL.md                    # 主技能文件
 ├── templates/
-│   └── report.html           # HTML 报告模板
+│   └── report.html             # HTML 报告模板
+├── lib/                        # git submodules
+│   ├── html2docx/              # HTML→DOCX 转换器
+│   └── humanizer-zh/           # 中文 AI 味检测与去味
 ├── LICENSE
 └── README.md
 ```

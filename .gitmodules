@@ -1,0 +1,6 @@
+[submodule "lib/html2docx"]
+	path = lib/html2docx
+	url = git@github.com:Jungod1121/html2docx.git
+[submodule "lib/humanizer-zh"]
+	path = lib/humanizer-zh
+	url = https://github.com/op7418/Humanizer-zh.git
