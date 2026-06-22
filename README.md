@@ -7,8 +7,10 @@
 - 接收作业要求（文字/PDF/截图）
 - 交互式确认是否需要代码、用什么语言（Python / MATLAB / C++ / ...）
 - 自动编写代码、运行、捕获输出和图表
+- **Web 搜索增强**：中英文并行搜索，确保报告数据有据可查，不凭空编造
 - 生成含公式/图表/代码附录的 HTML 报告
-- 内置 AI 味检测与去味，让报告读起来像真人写的
+- **用户审阅**：生成后先给你看，确认无误再继续
+- 内置 AI 味检测与去味（Humanizer-zh + 纯规则 fallback），让报告读起来像真人写的
 - 通过 html2docx 转换为排版好的 DOCX（封面+目录+页码+原生 OMML 公式）
 
 ## 安装
@@ -23,7 +25,7 @@ git clone https://github.com/Jungod1121/course-assignment.git ~/.claude/skills/c
 | 依赖 | 说明 |
 |------|------|
 | [html2docx](https://github.com/Jungod1121/html2docx) | HTML→DOCX 转换器，必须安装到 `~/.claude/skills/html2docx/` |
-| [Humanizer-zh](https://github.com/op7418/Humanizer-zh) | 中文 AI 味检测与去味，必须安装到 `~/.claude/skills/humanizer-zh/` |
+| [Humanizer-zh](https://github.com/op7418/Humanizer-zh) | 中文 AI 味检测与去味（推荐），未安装时自动降级为纯规则检查 |
 | Python 3 | numpy, scipy, matplotlib, python-docx, beautifulsoup4, lxml, latex2mathml, pillow |
 | MATLAB (可选) | 用于控制系统/信号处理类作业，需配置 MCP |
 
@@ -42,9 +44,12 @@ pip3 install numpy scipy matplotlib python-docx beautifulsoup4 lxml latex2mathml
 1. 确认课程名称、作业标题、学生信息
 2. 询问是否需要写代码、用什么语言
 3. 编写并运行代码，保存结果
-4. 生成 HTML 报告
-5. 检查 AI 味并去味
-6. 转换为 DOCX
+4. **Web 搜索**，中英文并行，用真实数据写报告
+5. 生成 HTML 报告，**先给你审阅**
+6. 检查 AI 味并去味
+7. 转换为 DOCX
+
+预估耗时：无代码 3-5 分钟，有代码 5-15 分钟。
 
 ## 文件结构
 
