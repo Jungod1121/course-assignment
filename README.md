@@ -1,7 +1,7 @@
 # Course Assignment — 课程作业自动化
 
 <p align="center">
-  <img src="assets/banner.png" alt="Course Assignment — 奶龙备战期末周" width="600">
+  <img src="assets/banner.png" alt="Course Assignment — 奶龙备战期末周" width="300">
 </p>
 
 <p align="center">
