@@ -104,11 +104,13 @@ description: |
 ### 3.1 准备
 1. 创建 `code/` 和 `figures/` 子目录
 2. 编写代码到 `code/<name>.py` 或 `code/<name>.m`
+3. **检查依赖** — 代码运行前确认所需库已安装。Python 项目先跑 `python3 -c "import pandas, sklearn, matplotlib"` 验证，缺失则 `pip3 install`。MATLAB 项目检查对应 Toolbox 是否可用。
 
 ### 3.2 Python 执行
 ```bash
-python3 code/script.py
+cd <output_dir> && python3 code/script.py
 ```
+- ⚠️ 必须 `cd` 到输出目录再执行，这样代码中 `figures/xxx.png` 的相对路径才正确
 - 捕获 stdout/stderr，保存到 `code/output.txt`
 - 所有 `plt.savefig()` 写入 `figures/xxx.png`（dpi≥150）
 - 代码中 print 的数值结果留存，用于报告中的数据表格
@@ -148,6 +150,8 @@ mcp__matlab__run_matlab_file  → 运行完整 .m 文件
 
 无论是否写代码，报告都需要准确的事实和数据支撑。写初稿前先搜一轮。
 
+**⚠️ 此阶段不可跳过。** 即使你"已经知道"某个数据集或知识点，也必须搜索验证。本次 Titanic 作业就是反面案例：第一次写报告时跳过了 Phase 4，参考文献全是凭记忆编的（如"Géron, Hands-On ML"），后来补搜才发现真正的公开基准来自 GitHub 开源项目（alicevillar 84.36%、ananyasrivastav12 RF 83.80%）。凭记忆编的参考文献一旦被老师核实就会穿帮。
+
 ### 4.1 搜索策略
 
 | 报告类型 | 搜索内容 | 最少搜索轮数 |
@@ -174,6 +178,15 @@ mcp__matlab__run_matlab_file  → 运行完整 .m 文件
 - 换不同关键词重试一次
 - 仍然不行 → 用已有知识写，在报告中注明"未检索到"的数据项
 - 绝不虚构数据或引文
+
+### 4.4 自检（进入 Phase 5 前必须确认）
+
+在动手写 HTML 之前，确认以下三个问题：
+1. **我真的调用了 WebSearch 吗？**（不是"心里有数"，是实际跑了搜索）
+2. **搜索结果里有具体的数字/型号/来源吗？**（不是模糊摘要，是可以引用的具体数据）
+3. **参考文献清单列好了吗？**（至少 3 条，每条来自搜索结果，不是训练数据）
+
+三个问题有一个答"没有/不确定" → 回去补搜索。
 
 ---
 
