@@ -1,5 +1,9 @@
 # Course Assignment — 课程作业自动化
 
+<p align="center">
+  <img src="assets/banner.png" alt="Course Assignment — 奶龙备战期末周" width="600">
+</p>
+
 从作业要求到 DOCX 报告的完整流水线。Actor 写 → Critic 审 → 去 AI 味 → Critic 复核 → DOCX。
 
 ## 架构
@@ -108,3 +112,16 @@ pip3 install numpy scipy matplotlib python-docx beautifulsoup4 lxml latex2mathml
 ## License
 
 MIT
+
+---
+
+<p align="center">
+  <a href="https://claude.ai/code"><img src="https://img.shields.io/badge/Claude_Code-Skill-4da6ff?logo=claude&logoColor=white" alt="Claude Code Skill"></a>
+  <a href="https://github.com/Jungod1121/html2docx"><img src="https://img.shields.io/badge/submodule-html2docx-blue" alt="html2docx"></a>
+  <a href="https://github.com/op7418/Humanizer-zh"><img src="https://img.shields.io/badge/submodule-Humanizer--zh-8A2BE2" alt="Humanizer-zh"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white" alt="Python"></a>
+  <br>
+  <a href="https://github.com/Jungod1121/course-assignment/stargazers"><img src="https://img.shields.io/github/stars/Jungod1121/course-assignment?style=social" alt="GitHub stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://github.com/Jungod1121/course-assignment/issues"><img src="https://img.shields.io/github/issues/Jungod1121/course-assignment" alt="GitHub issues"></a>
+</p>
