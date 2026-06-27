@@ -1,13 +1,9 @@
 ---
 name: course-assignment
-description: |
-  多 Agent 课程作业流水线 — Actor 写报告 → Critic 独立审查 → Humanizer-zh 去 AI 味 → Critic 复核技术准确性。
-  支持 Python/MATLAB/C/C++ 代码自动运行、WebSearch 事实核查、GB/T 7714 参考文献、
-  html2docx 生成标准 DOCX。两条 Critic 门禁确保质量。
-  触发词：作业、课程报告、大作业、实验报告、结课作业、仿真、assignment
+description: 全自动课程报告生成器
 ---
 
-# 作业一条龙 — 全自动课程报告生成器
+# 全自动课程报告生成器
 
 从作业要求到 DOCX 报告的完整流水线。7 个阶段，不可跳过。
 预估总耗时：无代码作业 3-5 分钟，有代码作业 5-15 分钟（取决于搜索和代码运行时间）。
