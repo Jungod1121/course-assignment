@@ -1,4 +1,4 @@
-# Course Assignment — 课程作业自动化
+# 作业一条龙 — 全自动课程报告生成器
 
 <p align="center">
   <img src="assets/banner.png" alt="Course Assignment — 奶龙备战期末周" width="300">
